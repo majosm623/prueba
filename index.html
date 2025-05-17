@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediSchedule - Sistema de Citas Médicas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <i class="fas fa-calendar-check"></i>
+        <h1>MediSchedule</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#features">Funcionalidades</a></li>
+          <li><a href="#appointment">Agendar Cita</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn btn-outline" id="loginBtn">Iniciar Sesión</button>
+        <button class="btn btn-primary" id="registerBtn">Registrarse</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Sistema de Agendamiento de Citas Médicas</h2>
+      <p>Gestiona tus citas médicas de forma rápida y sencilla, con confirmación en tiempo real y notificaciones automáticas.</p>
+      <button class="btn btn-primary" id="heroAppointmentBtn">Agendar una cita</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nuestras Funcionalidades</h2>
+        <p>Descubre cómo nuestro sistema puede mejorar tu experiencia en la gestión de citas médicas</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Agendamiento en Tiempo Real</h3>
+          <p>Consulta la disponibilidad de los médicos y agenda tu cita al instante, sin esperas ni intermediarios.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-times"></i>
+          </div>
+          <h3>Cancelación Inmediata</h3>
+          <p>Cancelar o reprogramar tu cita es tan fácil como hacer clic en un botón, liberando el horario para otros pacientes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>Notificaciones Automáticas</h3>
+          <p>Recibe confirmaciones y recordatorios por correo electrónico o SMS para no olvidar tu cita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Section -->
+  <section class="appointment-section" id="appointment">
+    <div class="container">
+      <div class="section-title">
+        <h2>Agenda tu Cita Médica</h2>
+        <p>Selecciona al especialista y el horario que mejor se adapte a tus necesidades</p>
+      </div>
+      <div class="appointment-container">
+        <div class="appointment-form">
+          <form id="appointmentForm">
+            <div class="form-group">
+              <label for="specialty">Especialidad Médica</label>
+              <select id="specialty" class="form-control" required>
+                <option value="">Selecciona una especialidad</option>
+                <option value="general">Medicina General</option>
+                <option value="pediatrics">Pediatría</option>
+                <option value="cardiology">Cardiología</option>
+                <option value="dermatology">Dermatología</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="doctor">Médico</label>
+              <select id="doctor" class="form-control" required>
+                <option value="">Selecciona un médico</option>
+                <option value="dr-torres">Dra. Ana Torres</option>
+                <option value="dr-perez">Dr. Juan Pérez</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Fecha</label>
+                <input type="date" id="date" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="time">Hora</label>
+                <input type="time" id="time" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="notes">Notas adicionales</label>
+              <textarea id="notes" class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Confirmar Cita</button>
+          </form>
+        </div>
+        <div class="doctor-image"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>MediSchedule</h3>
+          <p>Sistema de agendamiento de citas médicas en tiempo real para clínicas y hospitales.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#features">Funcionalidades</a></li>
+            <li><a href="#appointment">Agendar Cita</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contacto</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Universidad de Cartagena CT Lorica</li>
+            <li><i class="fas fa-phone"></i> +57 123 456 7890</li>
+            <li><i class="fas fa-envelope"></i> info@medischedule.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 MediSchedule. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 class="modal-title">Iniciar Sesión</h3>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Correo Electrónico</label>
+          <input type="email" id="loginEmail" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 class="modal-title">Registrarse</h3>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="registerName">Nombre Completo</label>
+          <input type="text" id="registerName" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="registerEmail">Correo Electrónico</label>
+          <input type="email" id="registerEmail" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">Contraseña</label>
+          <input type="password" id="registerPassword" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="registerConfirmPassword">Confirmar Contraseña</label>
+          <input type="password" id="registerConfirmPassword" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="registerType">Tipo de Usuario</label>
+          <select id="registerType" class="form-control" required>
+            <option value="patient">Paciente</option>
+            <option value="receptionist">Recepcionista</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div class="modal" id="confirmationModal">
+    <div class="modal-content confirmation-modal">
+      <span class="close-modal">&times;</span>
+      <div class="confirmation-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3 class="modal-title">¡Cita Agendada Exitosamente!</h3>
+      <div id="confirmationDetails">
+        <p><strong>Médico:</strong> <span id="confDoctor"></span></p>
+        <p><strong>Fecha:</strong> <span id="confDate"></span></p>
+        <p><strong>Hora:</strong> <span id="confTime"></span></p>
+        <p>Recibirás una confirmación por correo electrónico con los detalles de tu cita.</p>
+      </div>
+      <button class="btn btn-primary" id="closeConfirmationBtn">Aceptar</button>
+    </div>
+  </div>
+
+  <!-- Dashboard (hidden by default) -->
+  <div id="dashboard" style="display: none;">
+    <div class="dashboard">
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h3>MediSchedule</h3>
+          <p id="userEmail"></p>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="#" class="active"><i class="fas fa-calendar-alt"></i> Mis Citas</a></li>
+            <li><a href="#"><i class="fas fa-user-md"></i> Médicos</a></li>
+            <li><a href="#"><i class="fas fa-bell"></i> Notificaciones</a></li>
+            <li><a href="#"><i class="fas fa-user-cog"></i> Configuración</a></li>
+            <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Mis Próximas Citas</h4>
+            <button class="btn btn-primary" id="newAppointmentBtn">Nueva Cita</button>
+          </div>
+          <ul class="appointments-list" id="appointmentsList">
+            <!-- Las citas se agregarán dinámicamente aquí -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
